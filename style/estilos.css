@@ -58,8 +58,9 @@ nav {
 .banner {
   background-image: url(../media/frente-local.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  height: 600px;
+  height: clamp(200px, 40vh, 420px);
   margin: 0;
   padding: 0;
 }
