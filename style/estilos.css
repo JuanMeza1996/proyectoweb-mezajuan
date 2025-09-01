@@ -1,0 +1,329 @@
+@charset "UTF-8";
+/* sass/main.scss */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --nav-h: 72px;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #FFF8E3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  font-family: "Gill Sans", sans-serif;
+  color: #000;
+}
+
+p {
+  font-size: clamp(1rem, 2.1vw, 1.25rem);
+  line-height: 1.6;
+  font-style: italic;
+  padding: 2%;
+}
+
+nav {
+  width: auto;
+}
+
+.navbar-custom {
+  background-color: #ffc0cb;
+}
+.navbar-custom .nav-link, .navbar-custom .navbar-brand {
+  color: #000;
+  font-weight: bold;
+}
+.navbar-custom .nav-link:hover, .navbar-custom .navbar-brand:hover {
+  color: #fff;
+}
+.navbar-custom .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.9)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.banner {
+  background-image: url(../media/frente-local.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 480px) {
+  .banner {
+    height: 220px;
+  }
+}
+
+.futer {
+  background-color: #FFF8E3;
+  text-align: center;
+  padding: 1rem 0;
+}
+.futer img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: none;
+  object-fit: contain;
+}
+.futer a {
+  display: inline-block;
+}
+.futer .wsp {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 999;
+}
+@media (max-width: 480px) {
+  .futer img {
+    width: 32px;
+    height: 32px;
+  }
+  .futer .wsp {
+    width: 56px;
+    height: 56px;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+.titulo {
+  font-size: 70px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #E6A4B4;
+  text-shadow: 4px 3px 5px rgba(0, 0, 0, 0.75);
+}
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 2rem;
+  }
+}
+
+.texto-principal {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-areas: "quienes-somos quienes-somos" "texto1        imagen1" "texto3        imagen2" "texto4        imagen3";
+  gap: 1.5rem;
+  align-items: start;
+  background: #F5EEE6;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  column-gap: 2rem;
+  row-gap: 2.5rem;
+}
+.texto-principal img {
+  width: 100%;
+  max-width: none;
+  align-self: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+.texto-principal .quienes-somos {
+  margin: 0;
+  grid-area: quienes-somos;
+  font-size: 3rem;
+  padding: 2%;
+}
+.texto-principal .parrafo1 {
+  grid-area: texto1;
+  overflow: hidden;
+}
+.texto-principal .parrafo2 {
+  grid-area: texto3;
+}
+.texto-principal .parrafo3 {
+  grid-area: texto4;
+}
+.texto-principal .imagen1 {
+  grid-area: imagen1;
+}
+.texto-principal .imagen2 {
+  grid-area: imagen2;
+}
+.texto-principal .imagen3 {
+  grid-area: imagen3;
+}
+@media (max-width: 992px) {
+  .texto-principal {
+    grid-template-columns: 1fr;
+    grid-template-areas: "quienes-somos" "texto1" "imagen1" "texto3" "imagen2" "texto4" "imagen3";
+    padding: 1rem;
+  }
+}
+
+.subtitulo {
+  font-size: 55px;
+  text-align: center;
+  color: #E6A4B4;
+  margin-top: 40px;
+  text-shadow: 4px 3px 5px rgba(0, 0, 0, 0.75);
+}
+
+.tortas {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+}
+@media (max-width: 992px) {
+  .tortas {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+@media (max-width: 576px) {
+  .tortas {
+    grid-template-columns: 1fr;
+  }
+}
+.tortas img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.matilda, .galletas, .brownie {
+  width: 100%;
+  box-shadow: 47px 10px 74px -56px rgba(0, 0, 0, 0.82);
+  border-radius: 71px;
+}
+
+.maps1 {
+  margin-top: 0;
+  text-align: center;
+  background-color: #F5EEE6;
+}
+
+.maps {
+  background-color: #F5EEE6;
+}
+
+.texto3 {
+  background-color: #F5EEE6;
+  text-align: center;
+  line-height: 150px;
+}
+
+.push-down {
+  padding-top: var(--nav-h);
+}
+
+.logo {
+  width: 10%;
+  position: static;
+}
+
+.product-thumb {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* (A) Ken Burns en el banner */
+@keyframes banner-zoom {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 110%;
+  }
+}
+.banner {
+  animation: banner-zoom 18s ease-in-out infinite alternate;
+  will-change: background-size;
+}
+
+/* (B) Micro-interacción en cards de productos */
+.tortas > div {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tortas > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.tortas > div img {
+  transition: transform 0.35s ease;
+}
+
+.tortas > div:hover img {
+  transform: scale(1.04);
+}
+
+/* (C) Subrayado animado del título principal */
+.titulo {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  text-align: center;
+  padding-bottom: 0.2em;
+  text-decoration: none;
+  background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+  animation: underline-sweep 0.9s 0.4s ease-out forwards;
+}
+
+@keyframes underline-sweep {
+  to {
+    background-size: 100% 3px;
+  }
+}
+/*botón con micro-hover */
+.btn-primary {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* iconos del footer (excepto WhatsApp) */
+.futer a img:not(.wsp) {
+  transition: transform 0.2s ease;
+}
+
+.futer a img:not(.wsp):hover {
+  transform: translateY(-2px) scale(1.06);
+}
+
+/*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,14 @@
+/* sass/main.scss */
+@use 'variables';
+@use 'mixins';
+
+@use 'base/base';
+@use 'layout/navbar';
+@use 'layout/banner';
+@use 'layout/footer';
+@use 'components/texto-principal';
+@use 'components/products';
+@use 'pages/maps';
+@use 'pages/contact';
+@use 'utilities/helpers';
+@use 'animations/animations';

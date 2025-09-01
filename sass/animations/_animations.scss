@@ -1,0 +1,88 @@
+@use '../variables' as *;
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* (A) Ken Burns en el banner */
+@keyframes banner-zoom {
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 110%;
+    }
+}
+
+.banner {
+    animation: banner-zoom 18s ease-in-out infinite alternate;
+    will-change: background-size;
+}
+
+/* (B) Micro-interacción en cards de productos */
+.tortas>div {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.tortas>div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .12);
+}
+
+.tortas>div img {
+    transition: transform .35s ease;
+}
+
+.tortas>div:hover img {
+    transform: scale(1.04);
+}
+
+/* (C) Subrayado animado del título principal */
+.titulo {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+
+    padding-bottom: .2em;
+    text-decoration: none;
+    background: linear-gradient(currentColor 0 0) 0 100% / 0% 3px no-repeat;
+    animation: underline-sweep .9s .4s ease-out forwards;
+}
+
+@keyframes underline-sweep {
+    to {
+        background-size: 100% 3px;
+    }
+}
+
+/*botón con micro-hover */
+.btn-primary {
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .15);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .12);
+}
+
+/* iconos del footer (excepto WhatsApp) */
+.futer a img:not(.wsp) {
+    transition: transform .2s ease;
+}
+
+.futer a img:not(.wsp):hover {
+    transform: translateY(-2px) scale(1.06);
+}

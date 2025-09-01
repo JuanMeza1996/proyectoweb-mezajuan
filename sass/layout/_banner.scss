@@ -1,0 +1,12 @@
+@use '../variables' as vars;
+@use '../mixins' as m;
+
+.banner {
+  background-image: url(../media/frente-local.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  margin: 0; padding: 0;
+
+  @include m.respond-max(vars.$bp-xs) { height: 220px; }
+}

@@ -1,0 +1,17 @@
+@use 'variables' as vars;
+
+@mixin respond-max($bp) { @media (max-width: $bp) { @content; } }
+
+@mixin card {
+  background: vars.$color-white;
+  border-radius: 14px;
+  box-shadow: vars.$shadow-soft;
+  padding: 1rem;
+}
+
+@mixin thumb($w: 4, $h: 3, $radius: 12px) {
+  width: 100%;
+  aspect-ratio: #{$w} / #{$h};
+  object-fit: cover;
+  border-radius: $radius;
+}

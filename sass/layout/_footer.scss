@@ -1,0 +1,43 @@
+@use '../variables' as vars;
+@use '../mixins' as m;
+
+.futer {
+  background-color: vars.$color-cream;
+  text-align: center;
+  padding: 1rem 0;
+
+  img {
+    width: vars.$footer-icon;
+    height: vars.$footer-icon;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: none;
+    object-fit: contain;
+  }
+
+  a { display: inline-block; }
+
+  // Botón flotante de WhatsApp
+  .wsp {
+    position: fixed;
+    width: vars.$footer-wsp;
+    height: vars.$footer-wsp;
+    right: 16px;
+    bottom: 16px;
+    z-index: 999;
+  }
+
+  // Ajustes en móviles pequeños
+  @include m.respond-max(vars.$bp-xs) {
+    img {
+      width: vars.$footer-icon-xs;
+      height: vars.$footer-icon-xs;
+    }
+    .wsp {
+      width: vars.$footer-wsp-xs;
+      height: vars.$footer-wsp-xs;
+      right: 12px;
+      bottom: 12px;
+    }
+  }
+}

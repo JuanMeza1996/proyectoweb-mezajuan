@@ -1,0 +1,3 @@
+@use '../variables' as vars;
+
+.texto3 { background-color: vars.$color-beige; text-align: center; line-height: 150px; }

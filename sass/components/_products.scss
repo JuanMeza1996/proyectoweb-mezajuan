@@ -1,0 +1,31 @@
+@use '../variables' as vars;
+@use '../mixins' as m;
+
+.subtitulo {
+  font-size: 55px; text-align: center;
+  color: vars.$color-accent; margin-top: 40px;
+  text-shadow: 4px 3px 5px rgba(0,0,0,.75);
+}
+
+.tortas {
+  display: grid;
+  gap: 1.25rem;
+
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+
+  @include m.respond-max(vars.$bp-lg) {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+
+  @include m.respond-max(vars.$bp-sm) {
+    grid-template-columns: 1fr;
+  }
+
+  img { @include m.thumb(4, 3, 12px); }
+}
+
+.matilda, .galletas, .brownie {
+  width: 100%;
+  box-shadow: vars.$shadow-thumb;
+  border-radius: vars.$radius-pill;
+}

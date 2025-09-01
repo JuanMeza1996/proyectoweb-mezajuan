@@ -1,0 +1,6 @@
+@use '../variables' as vars;
+@use '../mixins' as m;
+
+.push-down { padding-top: var(--nav-h); }
+.logo { width: 10%; position: static; }
+.product-thumb { @include m.thumb(4, 3, 12px); }

@@ -1,0 +1,24 @@
+@use '../variables' as vars;  
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root { --nav-h: #{vars.$nav-h}; }   
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: vars.$color-cream;  
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+body { font-family: vars.$font-ui; color: vars.$color-text; }
+
+p {
+  font-size: clamp(1rem, 2.1vw, 1.25rem);
+  line-height: 1.6;
+  font-style: italic;
+  padding: 2%;
+}
+
+nav { width: auto; }
