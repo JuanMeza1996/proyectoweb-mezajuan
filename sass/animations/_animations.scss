@@ -1,16 +1,16 @@
 @use '../variables' as *;
 
 @media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation: none !important;
-        transition: none !important;
+html:focus-within{
+    scroll-behavior:auto;
     }
+    :where(body) * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
-
-/* (A) Ken Burns en el banner */
+ 
 @keyframes banner-zoom {
     from {
         background-size: 100%;
@@ -26,7 +26,6 @@
     will-change: background-size;
 }
 
-/* (B) Micro-interacción en cards de productos */
 .tortas>div {
     transition: transform .25s ease, box-shadow .25s ease;
 }
@@ -44,7 +43,6 @@
     transform: scale(1.04);
 }
 
-/* (C) Subrayado animado del título principal */
 .titulo {
     display: block;
     width: fit-content;
@@ -63,7 +61,6 @@
     }
 }
 
-/*botón con micro-hover */
 .btn-primary {
     transition: transform .18s ease, box-shadow .18s ease;
 }
@@ -78,7 +75,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, .12);
 }
 
-/* iconos del footer (excepto WhatsApp) */
+
 .futer a img:not(.wsp) {
     transition: transform .2s ease;
 }

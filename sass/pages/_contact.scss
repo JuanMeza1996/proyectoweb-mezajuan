@@ -1,3 +1,21 @@
 @use '../variables' as vars;
 
-.texto3 { background-color: vars.$color-beige; text-align: center; line-height: 150px; }
+.texto3 {
+  display: flex;
+  align-items: center;     
+  justify-content: center; 
+
+  /* Legibilidad */
+  line-height: 1.5;  
+  text-align: center;
+
+ 
+  min-height: 3lh; 
+  padding: clamp(12px, 2vw, 24px);
+}
+
+@media (max-width: 480px) {
+  .texto3 {
+    min-height: 4lh;
+  }
+}
