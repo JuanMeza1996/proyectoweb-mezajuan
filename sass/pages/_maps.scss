@@ -1,4 +1,26 @@
 @use '../variables' as vars;
 
-.maps1 { margin-top: 0; text-align: center; background-color: vars.$color-beige; }
-.maps  { background-color: vars.$color-beige; }
+.maps1 {
+  margin-top: 0;
+  text-align: center;
+  background-color: vars.$color-beige;
+  padding-inline: 1rem;  
+
+  @media (min-width: 576px) {
+    padding-inline: 2rem;
+  }
+}
+
+.maps {
+  background-color: vars.$color-beige;
+
+  iframe {
+    width: 100%;        
+    max-width: 900px;   
+    aspect-ratio: 16/9;  
+    border: 0;
+    display: block;
+    margin-inline: auto; 
+    border-radius: 12px; 
+  }
+}

@@ -273,10 +273,25 @@ nav {
   margin-top: 0;
   text-align: center;
   background-color: #F5EEE6;
+  padding-inline: 1rem;
+}
+@media (min-width: 576px) {
+  .maps1 {
+    padding-inline: 2rem;
+  }
 }
 
 .maps {
   background-color: #F5EEE6;
+}
+.maps iframe {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+  border: 0;
+  display: block;
+  margin-inline: auto;
+  border-radius: 12px;
 }
 
 .texto3 {
