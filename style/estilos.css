@@ -59,9 +59,14 @@ nav {
 }
 
 .navbar-nav {
-  margin: 0 auto;
+  margin-left: 3rem;
   align-items: center;
+  margin: 0;
   justify-content: center;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
 }
 
 .banner {

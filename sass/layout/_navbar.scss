@@ -16,7 +16,11 @@
 }
 
 .navbar-nav {
-  margin: 0 auto;        
-  align-items: center;    
+   margin-left: 3rem; 
+  align-items: center;   
+  margin: 0; 
   justify-content: center;
+}
+.navbar-collapse {
+  justify-content: flex-end; 
 }
