@@ -168,6 +168,7 @@ nav {
   text-decoration-line: underline;
   color: #E6A4B4;
   text-shadow: 4px 3px 5px rgba(0, 0, 0, 0.75);
+  font-family: "Dancing Script", cursive;
 }
 @media (max-width: 480px) {
   .titulo {
@@ -205,6 +206,16 @@ nav {
   grid-area: quienes-somos;
   font-size: 3rem;
   padding: 2%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.texto-principal .parrafo1,
+.texto-principal .parrafo2,
+.texto-principal .parrafo3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
 }
 .texto-principal .parrafo1 {
   grid-area: texto1;
@@ -231,6 +242,14 @@ nav {
     grid-template-areas: "quienes-somos" "texto1" "imagen1" "texto3" "imagen2" "texto4" "imagen3";
     padding: 1rem;
   }
+}
+
+.subtitulo {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #E6A4B4;
+  margin-bottom: 1.5rem;
 }
 
 .subtitulo {
